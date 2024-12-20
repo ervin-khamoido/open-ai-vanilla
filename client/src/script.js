@@ -81,7 +81,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://localhost:3001', {
+    const response = await fetch(process.env.OPENAI_API_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
